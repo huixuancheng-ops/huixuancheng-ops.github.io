@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Huixuan Cheng</title>
+<meta name="description" content="Huixuan Cheng, PhD student at UC Berkeley working on humanoid robots and interpretability of robot foundation models.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root { --text:#1f1f1f; --muted:#5a5a5a; --link:#1772d0; --link-hover:#f09228; --line:#e6e6e6; --hl:#fffbe6; --thumb:#f2f2f2; }
+  * { box-sizing: border-box; }
+  body { margin:0; background:#fff; color:var(--text); font-family:'Lato', Verdana, Helvetica, sans-serif; font-size:15px; line-height:1.6; }
+  a { color:var(--link); text-decoration:none; }
+  a:hover, a:focus { color:var(--link-hover); }
+  .page { max-width:860px; margin:0 auto; padding:40px 24px 24px; }
+
+  .intro { display:flex; gap:32px; align-items:center; }
+  .intro-text { flex:1; min-width:0; }
+  .name { font-size:32px; text-align:center; margin:0 0 16px; font-weight:400; letter-spacing:0.3px; }
+  .intro-text p { margin:0 0 12px; }
+  .links { text-align:center; margin-top:16px; }
+  .links a { white-space:nowrap; }
+  .links .sep { color:var(--muted); margin:0 6px; }
+  .photo { width:220px; flex-shrink:0; }
+  .photo img { width:100%; border-radius:8px; display:block; }
+
+  h2 { font-size:22px; font-weight:400; margin:40px 0 4px; }
+  .section-note { color:var(--muted); margin:0 0 16px; }
+
+  .item { display:flex; gap:24px; padding:16px 12px; border-radius:6px; align-items:center; }
+  .item.highlight { background:var(--hl); }
+  .thumb { width:220px; height:auto; flex-shrink:0; border-radius:6px; overflow:hidden; background:var(--thumb); display:flex; align-items:center; justify-content:center; }
+    .thumb { position:relative; }
+  .thumb img { width:100%; height:auto; display:block; }
+  .thumb .hover-video { position:absolute; inset:0; opacity:0; transition:opacity .2s; }
+  .item:hover .hover-video.ready { opacity:1; }
+  .thumb video { width:100%; height:100%; object-fit:cover; display:block; }
+  .desc { flex:1; min-width:0; }
+  .title { font-weight:700; font-size:16px; color:var(--text); }
+  a.title:hover { color:var(--link-hover); }
+  .authors { margin:2px 0; }
+  .venue { font-style:italic; }
+  .desc p { margin:6px 0 0; }
+  .tag { display:inline-block; font-size:12px; padding:1px 8px; border-radius:10px; background:#eef4fb; color:#1f5a96; margin-left:6px; vertical-align:2px; }
+
+  ul.plain { margin:8px 0 0; padding-left:20px; }
+  ul.plain li { margin-bottom:6px; }
+
+  footer { color:var(--muted); font-size:13px; text-align:right; margin-top:48px; padding-top:12px; border-top:1px solid var(--line); }
+
+  @media (max-width: 680px) {
+    .intro { flex-direction:column-reverse; gap:16px; }
+    .photo { width:160px; }
+    .item { flex-direction:column; align-items:stretch; }
+    .thumb { width:100%; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <section class="intro">
+    <div class="intro-text">
+      <h1 class="name">Huixuan Cheng</h1>
+      <p>I'm a second-year PhD student in Mechanical Engineering at <a href="https://www.berkeley.edu/">UC Berkeley</a>, advised by <a href="https://hybrid-robotics.berkeley.edu/koushil">Prof. Koushil Sreenath</a> in the Hybrid Robotics Lab.</p>
+      <p>I work on <b>humanoid robots</b> as well as <b>interpretability of foundation models</b>. I study what robotic models and policies learn inside, from the weights of humanoid policies to how world action models route information, and use that understanding to make them safer and more efficient.</p>
+      <p>Before Berkeley, I received my B.Eng. in Automation from <a href="https://www.tsinghua.edu.cn/en/">Tsinghua University</a>, advised by <a href="https://yilinmo.github.io/">Prof. Yilin Mo</a>, and was a visiting researcher at the CMU Robotics Institute with <a href="https://www.cs.cmu.edu/~cliu6/">Prof. Changliu Liu</a>.</p>
+      <p class="links">
+        <a href="mailto:huixuan_cheng@berkeley.edu">huixuan_cheng [at] berkeley.edu</a><span class="sep">/</span>
+        <a href="https://x.com/huixuanc20">X (Twitter)</a><span class="sep">/</span>
+        <a href="https://www.linkedin.com/in/huixuan-cheng-8692022b9/">LinkedIn</a>
+      </p>
+    </div>
+    <div class="photo">
+      <img src="images/huixuan.jpg" alt="Photo of Huixuan Cheng">
+    </div>
+  </section>
+
+  <h2>Research</h2>
+
+  <div class="item highlight">
+    <div class="thumb">
+      <img src="images/weight_diffusion_cover.jpg" alt="Generated policies walking, dancing and spin kicking on a Unitree G1 humanoid">
+      <video class="hover-video" src="https://humanoid-weight-diffusion.github.io/assets/video/spinkick.mp4" muted loop playsinline preload="none" aria-label="A Unitree G1 humanoid performing a spin kick with a generated policy"></video>
+    </div>
+    <div class="desc">
+      <a class="title" href="https://arxiv.org/abs/2610.20606">Modeling and Understanding Neural Weights of Humanoid Policies with Diffusion</a>
+      <div class="authors"><b>Huixuan Cheng</b>, Bike Zhang, Shankar Sastry, Koushil Sreenath</div>
+      <div><span class="venue">arXiv preprint</span>, 2026</div>
+      <div><a href="https://humanoid-weight-diffusion.github.io/">project page</a> / <a href="https://arxiv.org/abs/2610.20606">arXiv</a></div>
+      <p>We generate humanoid control policies directly in weight space. Sampled networks walk, dance, and spin kick zero-shot on a real Unitree G1. Looking inside the weights, every policy focuses on the kinematic prior: embodiment comes first, motion second.</p>
+    </div>
+  </div>
+
+  <div class="item">
+    <div class="thumb">
+      <img src="images/robust_tracking_cover.png" alt="Robust tracking control loop with reachability analysis on a neural network dynamic model" >
+    </div>
+    <div class="desc">
+      <a class="title" href="https://arxiv.org/abs/2410.10387">Robust Tracking Control with Neural Network Dynamic Models under Input Perturbations</a>
+      <div class="authors"><b>Huixuan Cheng</b>*, Hanjiang Hu*, Changliu Liu</div>
+      <div><span class="venue">Modeling, Estimation and Control Conference (MECC)</span>, 2025 &nbsp;<span style="color:var(--muted)">* equal contribution</span></div>
+      <div><a href="https://arxiv.org/abs/2410.10387">arXiv</a></div>
+      <p>A reachability-based robust MPC that uses neural network verification to bound multi-step reachable sets of learned dynamics, without linearization. Compared to tube MPC, it cuts control cost by up to 69% and tracking error by up to 63%.</p>
+    </div>
+  </div>
+
+  <footer>Last updated November 2026. Design inspired by <a href="https://jonbarron.info/">Jon Barron's website</a>.</footer>
+</div>
+<script>
+  document.querySelectorAll('.item').forEach(function (item) {
+    var v = item.querySelector('.hover-video');
+    if (!v) return;
+    v.addEventListener('playing', function () { v.classList.add('ready'); });
+    item.addEventListener('mouseenter', function () { var p = v.play(); if (p) p.catch(function () {}); });
+    item.addEventListener('mouseleave', function () { v.pause(); v.currentTime = 0; v.classList.remove('ready'); });
+  });
+</script>
+</body>
+</html>
